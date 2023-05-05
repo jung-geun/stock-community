@@ -24,3 +24,34 @@
     - [x] svelte를 이용한 웹페이지 구현
     - [x] sveltekit을 이용한 라우팅 구현 예정
     - [x] sveltekit을 이용한 api 호출 구현 예정
+
+## 5. 사용 방법
+- [x] backend 테스트
+    - [x] backend 폴더에서 다음 명령어를 실행
+    ```bash
+    npm run dev
+    ```
+    - [x] fastapi 실행
+    ```bash
+    uvicorn api:app --port 8000 --reload
+    ```
+    - [x] http://localhost:8000/docs 에서 api 확인
+
+- [x] database 연결
+    - [x] .db.example.json 을 db.json 으로 변경하여 사용
+    - [x] db.json은 gitignore에 등록되어 있음
+    - [x] db.json은 backend 폴더에 위치
+    - [x] db.json은 다음과 같은 형식으로 작성
+    ```json
+    {
+        "dialect":"mysql",
+        "driver": "pymysql",
+        "user":"root",
+        "password":"root",
+        "host":"192.168.0.100",
+        "port":3306,
+        "database" : "database"
+    }
+    ```
+    - [x] database 의 설정값을 환경에 맞게 변경
+
