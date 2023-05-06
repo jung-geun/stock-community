@@ -1,24 +1,13 @@
 <script>
-  async function hello(url=""){
-    const _url = "http://127.0.0.1:8000/" + url;
-    const res = await fetch(_url);
-    const json = await res.json();
-    if (res.ok) {
-      return json.message;
-    } else {
-      throw new Error(json.message);
-    }
-  }
+  import Router from "svelte-spa-router";
+  import routes from "./routes";
 
-  let promise = hello("svelte");
+  import Counter from "./lib/Counter.svelte";
 </script>
 
-{#await promise}
-  <p>...waiting</p>
-{:then message}
-  {#if message}
-    <h1>{message}</h1>
-  {:else}
-    <h1>no message</h1>
-  {/if}
-{/await}
+<main>
+  <a href="/">Home</a>
+  <a href="/#/about">About</a>
+</main>
+
+<Router {routes} />

@@ -28,7 +28,13 @@ async def hello_svelte() -> dict:
     return {"message": "Hello svelte"}
 
 app.include_router(todo_router)
+
 app.mount("/assets", StaticFiles(directory="frontend/dist/assets"))
 @app.get("/")
 def index():
     return FileResponse("frontend/dist/index.html")
+
+
+@app.get("/favicon.ico")
+def favicon():
+    return FileResponse("frontend/dist/favicon.ico")

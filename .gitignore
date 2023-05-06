@@ -1,0 +1,14 @@
+**/__pycache__/**
+api.http
+
+frontend/node_modules
+frontend/public/vite.svg
+frontend/index.html
+frontend/jsconfig.json
+frontend/package-lock.json
+frontend/package.json
+frontend/README.md
+frontend/svelte.config.js
+frontend/vite.config.js
+
+backend/db.json
