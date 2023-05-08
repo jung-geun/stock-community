@@ -20,5 +20,3 @@ async def get_single_todo(id: int = Path(..., title="The ID of the todo to retri
         if todo.id == id:
             return {"todo" : todo}
     return {"message": "Todo not found"}
-
-
