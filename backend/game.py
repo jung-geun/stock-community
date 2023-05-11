@@ -15,3 +15,8 @@ game_router = APIRouter()
 async def play(inputs: int = Path(..., title="The ID of the todo to retrieve.")):
     result = rps.play(inputs)
     return {"result" : result}
+
+@game_router.get("/rps")    
+async def play(inputs: int = Path(..., title="The ID of the todo to retrieve.")):
+    result = rps.play(inputs)
+    return {"result" : result}
