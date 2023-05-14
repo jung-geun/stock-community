@@ -1,14 +1,27 @@
-**/__pycache__/**
-api.http
+__pycache__/
+*.py[cod]
 
-frontend/node_modules
-frontend/public/vite.svg
+# backend 생성 파일
+api.http
+backend/db.json
+
+# frontend 생성 파일
 frontend/index.html
 frontend/jsconfig.json
 frontend/package-lock.json
-frontend/package.json
+frontend/postcss.config.js
 frontend/README.md
 frontend/svelte.config.js
+frontend/tailwind.config.cjs
 frontend/vite.config.js
 
-backend/db.json
+# 에디터 생성 파일
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
