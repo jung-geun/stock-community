@@ -4,6 +4,11 @@ __pycache__/
 api.http
 backend/db.json
 
+# backend 생성 파일
+api.http
+backend/db.json
+
+# frontend 생성 파일
 frontend/index.html
 frontend/jsconfig.json
 frontend/package-lock.json
