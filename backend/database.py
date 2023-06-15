@@ -1,6 +1,9 @@
 import datetime
 import urllib.parse
+
 from dataclasses import dataclass
+
+import pymysql
 from sqlalchemy import create_engine
 from sqlalchemy import Column, TEXT, VARCHAR
 from sqlalchemy.orm import scoped_session, sessionmaker
@@ -23,6 +26,13 @@ class Stock:
             self.__engine = create_engine(
                 SQLALCHEMY_DATABASE_URL, echo=True
             )
+            # self.conn = pymysql.connect(
+            #     host=host,
+            #     port=port,
+            #     user=conn_user,
+            #     password=conn_passwd,
+            #     charset="utf8mb4",
+            # )
             print("DB connected")
         except Exception as e:
             print(e)
@@ -63,6 +73,7 @@ class Ant(Stock):
         self.__SELECT_ANT = f"SELECT * FROM ant"
         self.__INSERT_ANT = f"INSERT INTO ant('id','mail','name','passwd') values('{id}','{mail}','{name}','{passwd}')"
         self.__UPDATE_ANT = f"UPDATE ant SET mail='{mail}', name='{name}', passwd='{passwd}' WHERE id='{id}'"
+        self.__DELETE_ANT = f"DELETE FROM ant WHERE id='{id}'"
         
 
     def __repr__(self):

@@ -27,10 +27,13 @@ app.include_router(todo_router)
 app.include_router(game_router)
 
 app.mount("/assets", StaticFiles(directory="../frontend/dist/assets"))
+
+
 @app.get("/")
 def index():
     return FileResponse("../frontend/dist/index.html")
 
+
 # @app.get("/rps/{inputs}")
 # def rps(inputs):
-    # PRS.Game.play(inputs)
+# PRS.Game.play(inputs)

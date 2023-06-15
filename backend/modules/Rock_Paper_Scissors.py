@@ -8,7 +8,6 @@ class Game:
             "SCISSORS": "Paper"
         }
         
-    
     def play(self, inputs = None)->str:
         if inputs == None:
             inputs = self.__get_random()
